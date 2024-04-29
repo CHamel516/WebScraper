@@ -19,11 +19,11 @@ url = 'https://www.wineenthusiast.com/region/us/'
 response = requests.get(url, headers=request_headers)
 soup = BeautifulSoup(response.content, 'html.parser')
 
-results = soup.find_all('div', class_='list')
-print(soup.prettify())
+results = soup.find_alL
+# print(results.prettify())
 
-# wine_elements = results.find_all("div", class_='list')
-# for wine_element in wine_elements:
-#    print(wine_element, end='\n'*2)
+wine_elements = results.find_all("div", class_='list')
+for wine_element in wine_elements:
+  print(wine_element, end='\n'*2)
 
-# print(response.text)
+ #print(response.text)
